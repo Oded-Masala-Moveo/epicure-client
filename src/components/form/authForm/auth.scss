@@ -1,0 +1,27 @@
+@import "../../../assets/styles/mixin/display-mixin",
+  "../../../assets/styles/mixin/media-queries",
+  "../../../assets/styles/variable";
+
+.auth-form-container {
+  @include flex-container(column, center, center);
+  .input-form-container {
+    @include flex-container(column, center, center,32px);
+
+  }
+  .auth-request-error-message { 
+    color: rgb(151, 37, 37);
+      position: relative;
+      top: 11px;
+      font-size: 15px;
+      height: 0px;
+  }
+  .submit-login-button{
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+  .forget-password-container {
+    p {
+      font-size: 14px;
+    }
+  }
+}

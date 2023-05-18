@@ -1,0 +1,41 @@
+@import "../../assets/styles/mixin/media-queries";
+.dish-container {
+  margin-bottom: 46px;
+  padding-left: 20px;
+  @include desktop() {
+    margin-bottom: 80px;
+  }
+  .desktop-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+  .popular-container {
+    margin: 48px 0px 16px 0px;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    @include desktop() {
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+  }
+  .link-to-restaurants {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    h3 {
+      letter-spacing: 2px;
+      font-size: 16px;
+      line-height: 35px;
+    }
+    @include desktop() {
+      display: none;
+    }
+    .arrow-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

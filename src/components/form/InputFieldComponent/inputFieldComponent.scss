@@ -1,0 +1,48 @@
+@import "../../../assets/styles/mixin/display-mixin",
+  "../../../assets/styles/mixin/media-queries",
+  "../../../assets/styles/variable";
+.input-checkout-container {
+  position: relative;
+  @include flex-container(column, start, flex-start,8px);
+  .label-checkout {
+    position: absolute;
+    top: 50%;
+    bottom:-15px;
+    z-index: 50;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.3s;
+    color: gray;
+    
+    &.active {
+      top: 0px;
+      font-size: 12px;
+    }
+  }
+  .input-checkout {
+    width: 336px;
+    border: none;
+    border-bottom:  0.5px solid #000000;
+    outline: none;
+    padding-bottom: 8px;
+    text-align: start;
+  }
+  .auth-input-change{
+    font-size: 14px;
+  }
+  .has-error{
+    // border-bottom:  0.5px solid #863535;
+   
+  }
+  .error-message{
+    position: absolute;
+    top: 25px;
+    color: #a30606;
+    font-size: 11px;
+    height: 0px;
+    line-height: 12px;
+    @include desktop (){
+      text-align: center;
+    }
+  }
+}
